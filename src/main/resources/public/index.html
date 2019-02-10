@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    vue incoming...
+
+    <div id="helloworld">   <!-- where we want our vue app to live -->
+        <p>Hello world</p>
+        <span v-if="seen">{{ message }}</span>  <!-- v-if is a condition described in the vue data -->
+
+    </div>
+
+    <div id="numlist">
+        <p>for-loop</p>
+        <ol>
+            <li v-for="num in nums">
+                {{ num.num }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="method">
+        <p>on-x(click) events</p>
+        {{ greeting }}
+        <br>
+        <button v-on:click="answer">Next</button>
+    </div>
+
+    <div id="sync">
+        <p>v-model(syncronized fields)</p>
+        <br>{{ message }}
+        <input v-model="message">
+    </div>
+
+    <div id="component">
+        <p>vue components</p>
+        <ol>
+            <todo-item></todo-item>             <!-- instance of our vue component -->
+        </ol>
+    </div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
